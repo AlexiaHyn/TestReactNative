@@ -1,13 +1,16 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import StackComponent from './Components/Stack';
 import DrawerComponent from './Components/Drawer';
 
+
 export default function App() {
+  const [signedIn, setSignedIn] = useState(false);
   return (
     <>
     <NavigationContainer>
-      <DrawerComponent />
+      <DrawerComponent signedIn = {signedIn}/>
     </NavigationContainer>
     </>
     
