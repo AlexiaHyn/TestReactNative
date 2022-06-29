@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, View, TextInput, Text } from 'react-native';
-import { Input, Icon } from '@rneui/themed';
+import { View} from 'react-native';
+import { Text, Card, Button, Icon, Input } from '@rneui/themed';
 import styleAH from '../Style/styleAH.js';
 
 function LoginScreen() {
@@ -15,15 +15,20 @@ function LoginScreen() {
     <View style={{padding:20}}>
         <View>
           <View>
+            <Text h1>Login</Text>
+            <Text> Please log in to continue. </Text>
+          </View>
+          
+          <View style={{padding:10}}>
             <Text>Email</Text>
             <Input
-              placeholder='INPUT WITH ICON'
+              placeholder='email'
               leftIcon={{ type: 'entypo', name: 'mail' }}
             />
 
             <Text>Password</Text>
             <Input
-              placeholder='INPUT WITH ICON'
+              placeholder='password'
               leftIcon={{ type: 'entypo', name: 'key' }}
             />
           </View>

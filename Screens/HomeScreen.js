@@ -1,13 +1,19 @@
 import React from 'react'
-import { Button, View } from 'react-native';
-function HomeScreen() {
+import { Button, View, Text } from 'react-native';
+import styleAH from '../Style/styleAH.js';
+
+function HomeScreen({ navigation: { navigate } }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Button
-      onPress={() => alert("Home Screen")}
-      title="Where Am I"
-    />
-  </View>
+    <>
+      <View style={styleAH.center}>
+        <Text>Home</Text>
+        <Button
+            title="Login"
+            onPress={() => navigate('Log In')}
+        />
+      </View>
+    </>
+   
   )
 }
 
